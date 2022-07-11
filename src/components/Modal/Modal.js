@@ -2,7 +2,7 @@ import React from 'react';
 import { createPortal } from 'react-dom';
 import { useEffect } from 'react';
 import PropTypes from 'prop-types';
-import './Modal.css';
+import modalStyles from './Modal.module.css';
 const modalRoot = document.querySelector('#modal-root');
 
 const Modal = ({ children, onClose }) => {
@@ -27,7 +27,7 @@ const Modal = ({ children, onClose }) => {
   };
 
   return createPortal(
-    <div className="Overlay" onClick={handleBackdropClick}>
+    <div className={modalStyles.overlay} onClick={handleBackdropClick}>
       <div className="Modal">{children}</div>
     </div>,
     modalRoot,

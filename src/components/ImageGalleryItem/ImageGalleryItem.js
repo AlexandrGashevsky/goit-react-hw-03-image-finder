@@ -1,13 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './ImageGalleryItem.css';
-//import styles from './ImageGalleryItem.module.scss';
+import imageGalleryItemStyles from './ImageGalleryItem.module.css';
 
 const ImageGalleryItem = ({ image, onImageClick }) => {
   const fullImage = () => onImageClick(image.largeImageURL);
 
   return (
-    <li className="ImageGalleryItem">
+    <li className={imageGalleryItemStyles.ImageGalleryItem}>
       <img src={image.webformatURL} alt={image.tags} onClick={fullImage} width="250" height="150" />
     </li>
   );

@@ -3,18 +3,19 @@
   justify-content: center;
   width: 100%;
  
-  background-color: blue;
+  background-color: rgb(31, 214, 107);
  
   
 }
 .buttonForm {
-    border:blue;
+    border: rgb(31, 214, 107);
     background-color: white;
 }
 .input {
     border: none;
     outline: none;
 }
+
 .SearchForm-input::placeholder {
   font: inherit;
   font-size: 18px;

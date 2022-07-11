@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
-import './IconButton.css';
+import iconButtonStyles from './IconButton.module.css';
 const IconButton = ({ children, onClick, ...allyProps }) => (
-  <button type="button" className="iconButton" onClick={onClick} {...allyProps}>
+  <button type="button" className={iconButtonStyles.iconButton} onClick={onClick} {...allyProps}>
     {children}
   </button>
 );

@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import PropTypes from 'prop-types';
-import './SearchForm.css';
-import { ImSearch } from 'react-icons/im';
+import searchFormStyles from './SearchForm.module.css';
+
 const SearchForm = ({ onSearch }) => {
   const [query, setQuery] = useState('');
 
@@ -24,14 +24,14 @@ const SearchForm = ({ onSearch }) => {
   const resetForm = () => setQuery('');
 
   return (
-    <form onSubmit={handleSubmit} className="SearchForm">
-      <button type="submit" className="buttonForm">
-        <ImSearch width="20px" height="20px" fill="#7e7b7b" />
+    <form onSubmit={handleSubmit} className={searchFormStyles.SearchForm}>
+      <button type="submit" className={searchFormStyles.buttonForm}>
+          <svg  width="24" height="24"><path d="M23.707,22.293l-5.969-5.969a10.016,10.016,0,1,0-1.414,1.414l5.969,5.969a1,1,0,0,0,1.414-1.414ZM10,18a8,8,0,1,1,8-8A8.009,8.009,0,0,1,10,18Z"/></svg>
       </button>
 
       <input
         type="text"
-        className="input"
+        className={searchFormStyles.input}
         name="query"
         value={query}
         onChange={handleSearchInput}

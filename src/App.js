@@ -1,7 +1,5 @@
 import React from 'react';
-import './App.css';
-import 'modern-normalize/modern-normalize.css';
-import { ImCross } from 'react-icons/im';
+
 import fetchImages from './components/Api/Api';
 import IconButton from './components/IconButton/IconButton';
 import ImageGallery from './components/ImageGallery/ImageGallery';
@@ -93,7 +91,7 @@ class App extends React.Component {
           <Modal onClose={this.toggleModal}>
             <div className="Close-box">
               <IconButton onClick={this.toggleModal} aria-label="Close modal">
-                <ImCross width="20px" height="20px" fill="#7e7b7b" />
+               some button
               </IconButton>
             </div>
             <img src={largeImage} alt="" className="Modal-image" />

@@ -1,7 +1,4 @@
 import axios from 'axios';
-//import { API_KEY } from './key';
-
-//axios.defaults.baseURL = 'https://pixabay.com/api';
 
 const fetchImages = async (searchQuery, currentPage) => {
   const { data } = await axios.get(
