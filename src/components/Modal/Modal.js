@@ -5,8 +5,8 @@ import PropTypes from 'prop-types';
 import modalStyles from './Modal.module.css';
 const modalRoot = document.querySelector('#modal-root');
 
-const Modal = ({ children, onClose }) => {
-  useEffect(() => {
+const Modal = ({ children, onClose }) => { 
+ useEffect(() => {
     window.addEventListener('keydown', handleKeyDown);
 
     return () => {
@@ -25,13 +25,13 @@ const Modal = ({ children, onClose }) => {
       onClose();
     }
   };
-
+ 
   return createPortal(
     <div className={modalStyles.overlay} onClick={handleBackdropClick}>
       <div className="Modal">{children}</div>
     </div>,
     modalRoot,
-  );
+  ); 
 };
 
 Modal.defaultProps = {
