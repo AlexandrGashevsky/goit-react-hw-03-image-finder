@@ -3,25 +3,22 @@ import PropTypes from 'prop-types';
 import searchFormStyles from './SearchForm.module.css';
 
 const SearchForm = ({ onSearch }) => {
+  
   const [query, setQuery] = useState('');
 
   const handleSearchInput = e => {
     const { value } = e.currentTarget;
-
     setQuery(value);
   };
 
   const handleSubmit = e => {
+   
     e.preventDefault();
-
     if (!query.trim()) return;
-
     onSearch(query);
+  }; 
 
-    resetForm();
-  };
 
-  const resetForm = () => setQuery('');
 
   return (
     <form onSubmit={handleSubmit} className={searchFormStyles.SearchForm}>

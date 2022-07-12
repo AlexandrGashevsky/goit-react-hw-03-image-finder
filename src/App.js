@@ -17,6 +17,7 @@ class App extends React.Component {
     largeImage: '',
     error: null,
   };
+
   componentDidUpdate(prevProps, prevState) {
     if (prevState.searchQuery !== this.state.searchQuery) {
       this.getImages();
@@ -24,21 +25,21 @@ class App extends React.Component {
   }
 
   onChangeQuery = query => {
-    this.setState({
-      images: [],
-      currentPage: 1,
-      searchQuery: query,
-      error: null,
-    });
+    if (query !== this.state.searchQuery){
+      this.setState({
+        images: [],
+        currentPage: 1,
+        searchQuery: query,
+        error: null,
+      });
+    }
   };
 
   getImages = async () => {
     const { currentPage, searchQuery } = this.state;
-
     this.setState({
       isLoading: true,
     });
-
     try {
       const { hits } = await fetchImages(searchQuery, currentPage);
 
@@ -56,7 +57,8 @@ class App extends React.Component {
       this.setState({
         isLoading: false,
       });
-    }
+
+  }
   };
 
   handleGalleryItem = fullImageUrl => {
