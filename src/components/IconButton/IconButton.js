@@ -6,14 +6,10 @@ const IconButton = ({ children, onClick, ...allyProps }) => (
   </button>
 );
 
-IconButton.defaultProps = {
-  onClick: () => null,
-  children: null,
-};
 
 IconButton.propTypes = {
-  onClick: PropTypes.func,
-  children: PropTypes.node,
+  onClick: PropTypes.func.isRequired,
+  children: PropTypes.node.isRequired,
   'aria-label': PropTypes.string.isRequired,
 };
 

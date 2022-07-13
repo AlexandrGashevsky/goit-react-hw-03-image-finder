@@ -1,6 +1,6 @@
 import React from 'react';
 
-import fetchImages from './components/Api/Api';
+import fetchImages from './Api/Api';
 import IconButton from './components/IconButton/IconButton';
 import ImageGallery from './components/ImageGallery/ImageGallery';
 import Button from './components/Button/Button';
